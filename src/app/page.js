@@ -25,14 +25,14 @@ export default function Home() {
                 type="text" 
                 value={name} 
                 onChange={(e) => setName(e.target.value)} 
-                placeholder="Enter player name"
+                placeholder="Entrez le nom du joueur"
                 className="border rounded-lg px-4 py-2 mb-4 w-full max-w-md"
             />
             <button 
                 onClick={addPlayer} 
                 className="bg-blue-500 text-white px-4 py-2 rounded-lg mb-4"
             >
-                Add Player
+                Ajouter un joueur
             </button>
             <ul className="w-full max-w-md">
                 {players.map((player, index) => (
@@ -46,7 +46,13 @@ export default function Home() {
                 disabled={players.length < 3} 
                 className="bg-green-500 text-white px-4 py-2 rounded-lg mt-4 disabled:bg-gray-400"
             >
-                Start Game
+                Démarrer le jeu
+            </button>
+            <button 
+                onClick={() => router.push('/words')} 
+                className="mt-4 bg-yellow-500 text-white px-4 py-2 rounded-lg"
+            >
+                Consulter la liste des mots
             </button>
         </div>
     );
