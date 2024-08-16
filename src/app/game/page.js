@@ -15,7 +15,7 @@ export default function Game() {
     const [impostorIndex, setImpostorIndex] = useState(null);
     const [scores, setScores] = useState({});
     const [gameRunning, setGameRunning] = useState(true);
-    const [roundFinished, setRoundFinished] = useState(false); // Étape intermédiaire
+    const [roundFinished, setRoundFinished] = useState(false);
     const router = useRouter();
 
     useEffect(() => {
@@ -203,7 +203,7 @@ export default function Game() {
                         <li 
                             key={index} 
                             className={`bg-white p-2 my-2 rounded-lg shadow-sm cursor-pointer ${
-                                selectedPlayer === player ? 'bg-red-200' : ''
+                                selectedPlayer === player ? '!bg-red-200' : ''
                             }`}
                             onClick={() => handleVote(player)}
                         >
